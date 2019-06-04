@@ -2,6 +2,11 @@ use ferris_says::say; // from the previous step
                       // use std::io::{stdout, BufWriter};
 use std::io::stdout;
 use std::io::BufWriter;
+
+// how to use a fn from another file
+mod arrays; // declares arrays.rs is a module
+use arrays::arrays_mod; // import the function to be used
+
 fn main() {
     let stdout = stdout();
     let out = b"Hello world!";
@@ -110,4 +115,8 @@ fn main() {
     };
 
     pi();
+
+    // Calling a function from a custom module
+
+    arrays_mod();
 }
